@@ -1,4 +1,4 @@
-//'use strict';
+'use strict';
 
 // const num = 50;
 
@@ -118,6 +118,33 @@
 // }
 // console.log(personalMovieDB);
 
+// const numberOfFilms = prompt('how much films you watched already?', '');
+
+// const personalMovieDB = {
+//     count: numberOfFilms,
+//     movies: {},
+//     actors: {},
+//     genres: [],
+//     privat: false
+// };
+
+// function showMyDB () {
+//     if (personalMovieDB.privat == false){
+//         console.log(personalMovieDB);
+//     } 
+// }
+
+// function writeYourGenres () {
+//     for(let i = 0; i < 3; i++) {
+//         let a = prompt("your favorite gener?", "");
+//         personalMovieDB.genres[i] = a;
+//     }
+// }
+
+// writeYourGenres();
+// showMyDB();
+
+
 
 
 
@@ -135,10 +162,143 @@
 // console.log(personalMovieDB);
 
 
-"use strict";
+// "use strict";
 
-function showFirstMessage() {
-    console.log ('hello world');
+// let num = 20;
+
+// function showFirstMessage(test) {
+//     console.log (test);
+//     num = 10;
+// }
+
+// showFirstMessage('hello world');
+// console.log(num);
+
+// function calc(a, b) {
+//     return ((a + b) * (a + b));
+// }
+// console.log(calc(4, 3));
+
+// function ret() {
+//     let num = 50;
+//     return num;
+// }
+
+// console.log(ret());
+
+
+// const calc = (a, b) => a + b; 
+
+// or 
+
+// const calc = (a, b) => {
+//     console.log(1);
+//     return a + b;
+// };
+
+// const str = "test";
+// const arr = [1, 2, 4];
+
+// console.log(str.length);
+// console.log(arr.length);
+
+// const fruit = "Some fruit i like fruit";
+// console.log(fruit.indexOf("fruit"));
+
+// const logg = "hello world";
+// console.log(logg.slice(6, 11))
+
+
+// function qqq (a, b) {
+//     let result;
+//     result = a % b;
+//     if (result == false){
+//         return console.log('vse chotko');
+//     } else {
+//         return console.log('ne chotko');
+//     }
+// }
+// qqq(9, 3);
+
+// const logg = "hello world";
+// console.log(logg.slice(6));
+
+// console.log(logg.substring(6, 11));
+
+// console.log(logg.substr(6, 5));
+
+// const num = 12.2;
+// console.log(Math.round(num));
+
+// const test = '12.2px';
+// console.log(parseInt(test));
+// console.log(parseFloat(test));
+
+
+
+let numberOfFilms;
+
+
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: {},
+};
+
+function rememberMyFilms(){
+    for(let i = 0; i < 1; i++) {
+        const a = prompt('the one of the last watching film?', ''),
+            b = prompt('what mark can you give to film?');
+        if (a != null && b != null && a !='' && b != '' && a.length < 50){
+            personalMovieDB.movies[a] = b;
+            console.log('done');
+        }else{
+            console.log('error');
+            i--;
+        }
+    }
 }
 
-showFirstMessage();
+function showMyDB () {
+    if (personalMovieDB.privat == false){
+        console.log(personalMovieDB);
+    } 
+}
+
+function writeYourGenres () {
+    for(let i = 0; i < 3; i++) {
+        let a = prompt(`your favorite gener? № ${i + 1}` , "");
+        personalMovieDB.genres[i] = a;
+    }
+}
+
+function start() {
+
+    numberOfFilms = +prompt('how much films you watched already?', '');
+    personalMovieDB.count = numberOfFilms;
+
+    while(numberOfFilms == '' || numberOfFilms == null || isNaN(numberOfFilms)){
+        numberOfFilms = +prompt('how much films you watched already?', '');
+        personalMovieDB.count = numberOfFilms;
+    }
+}
+
+function prr(){
+        let question = prompt('do you want to show your info?', '');
+        if(question == '' || question == null || question == "no"){
+            question = true;
+        } else {
+            question = false;
+        }
+        personalMovieDB.privat = question;
+}
+
+
+prr();
+start();
+rememberMyFilms();
+writeYourGenres();
+showMyDB();
+
