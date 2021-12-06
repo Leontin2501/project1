@@ -236,69 +236,123 @@
 
 
 
-let numberOfFilms;
+// let numberOfFilms;
 
 
-const personalMovieDB = {
-    count: numberOfFilms,
-    movies: {},
-    actors: {},
-    genres: [],
-    privat: {},
+// const personalMovieDB = {
+//     count: numberOfFilms,
+//     movies: {},
+//     actors: {},
+//     genres: [],
+//     privat: {},
+// };
+
+// function rememberMyFilms(){
+//     for(let i = 0; i < 1; i++) {
+//         const a = prompt('the one of the last watching film?', ''),
+//             b = prompt('what mark can you give to film?');
+//         if (a != null && b != null && a !='' && b != '' && a.length < 50){
+//             personalMovieDB.movies[a] = b;
+//             console.log('done');
+//         }else{
+//             console.log('error');
+//             i--;
+//         }
+//     }
+// }
+
+// function showMyDB () {
+//     if (personalMovieDB.privat == false){
+//         console.log(personalMovieDB);
+//     } 
+// }
+
+// function writeYourGenres () {
+//     for(let i = 0; i < 3; i++) {
+//         let a = prompt(`your favorite gener? № ${i + 1}` , "");
+//         personalMovieDB.genres[i] = a;
+//     }
+// }
+
+// function start() {
+
+//     numberOfFilms = +prompt('how much films you watched already?', '');
+//     personalMovieDB.count = numberOfFilms;
+
+//     while(numberOfFilms == '' || numberOfFilms == null || isNaN(numberOfFilms)){
+//         numberOfFilms = +prompt('how much films you watched already?', '');
+//         personalMovieDB.count = numberOfFilms;
+//     }
+// }
+
+// function prr(){
+//         let question = prompt('do you want to show your info?', '');
+//         if(question == '' || question == null || question == "no"){
+//             question = true;
+//         } else {
+//             question = false;
+//         }
+//         personalMovieDB.privat = question;
+// }
+
+
+// prr();
+// start();
+// rememberMyFilms();
+// writeYourGenres();
+// showMyDB();
+
+
+// function first (){
+//     setTimeout(function(){
+//     console.log(1);
+//     }, 500);
+// }
+
+// function second (){
+//     console.log(2);
+// }
+
+
+// first();
+// second();
+
+// function learnJS(lang, callback){
+//     console.log(`я учу: ${lang}`);
+//     callback();
+// }
+
+// function done(){
+//     console.log('я прошел етот урок');
+// }
+
+// learnJS('JavaScript', done);
+
+
+const options = {
+    name: 'test',
+    width: 1024,
+    height: 1024,
+    colors: {
+        border: 'black',
+        bg: 'red'
+    }
 };
 
-function rememberMyFilms(){
-    for(let i = 0; i < 1; i++) {
-        const a = prompt('the one of the last watching film?', ''),
-            b = prompt('what mark can you give to film?');
-        if (a != null && b != null && a !='' && b != '' && a.length < 50){
-            personalMovieDB.movies[a] = b;
-            console.log('done');
-        }else{
-            console.log('error');
-            i--;
-        }
-    }
-}
+console.log(Object.keys(options).length);
 
-function showMyDB () {
-    if (personalMovieDB.privat == false){
-        console.log(personalMovieDB);
-    } 
-}
+// let counter = 0;
+// for (let key in options) { //перебирає об'єкти
+//     if (typeof(options[key]) === 'object'){
+//         for (let i in options[key]) {
+//             console.log(`свойство ${i} имеет значение ${options[key][i]}`);
+//             counter++;
+//         }
+//     } else {
+//     console.log(`свойство ${key} имеет значение ${options[key]}`);
+//     counter++;
+//     }
+// }
+// console.log(counter);
 
-function writeYourGenres () {
-    for(let i = 0; i < 3; i++) {
-        let a = prompt(`your favorite gener? № ${i + 1}` , "");
-        personalMovieDB.genres[i] = a;
-    }
-}
-
-function start() {
-
-    numberOfFilms = +prompt('how much films you watched already?', '');
-    personalMovieDB.count = numberOfFilms;
-
-    while(numberOfFilms == '' || numberOfFilms == null || isNaN(numberOfFilms)){
-        numberOfFilms = +prompt('how much films you watched already?', '');
-        personalMovieDB.count = numberOfFilms;
-    }
-}
-
-function prr(){
-        let question = prompt('do you want to show your info?', '');
-        if(question == '' || question == null || question == "no"){
-            question = true;
-        } else {
-            question = false;
-        }
-        personalMovieDB.privat = question;
-}
-
-
-prr();
-start();
-rememberMyFilms();
-writeYourGenres();
-showMyDB();
 
