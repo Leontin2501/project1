@@ -245,6 +245,11 @@
 //     actors: {},
 //     genres: [],
 //     privat: {},
+//     prr,
+//     start,
+//     rememberMyFilms,
+//     writeYourGenres,
+//     showMyDB
 // };
 
 // function rememberMyFilms(){
@@ -296,11 +301,11 @@
 // }
 
 
-// prr();
-// start();
-// rememberMyFilms();
-// writeYourGenres();
-// showMyDB();
+// personalMovieDB.prr();
+// personalMovieDB.start();
+// personalMovieDB.rememberMyFilms();
+// personalMovieDB.writeYourGenres();
+// personalMovieDB.showMyDB();
 
 
 // function first (){
@@ -329,17 +334,25 @@
 // learnJS('JavaScript', done);
 
 
-const options = {
-    name: 'test',
-    width: 1024,
-    height: 1024,
-    colors: {
-        border: 'black',
-        bg: 'red'
-    }
-};
+// const options = {
+//     name: 'test',
+//     width: 1024,
+//     height: 1024,
+//     colors: {
+//         border: 'black',
+//         bg: 'red'
+//     },
+//     makeTest: function(){
+//         console.log("Test");
+//     }
+// };
 
-console.log(Object.keys(options).length);
+// options.makeTest();
+
+// const {border, bg} = options.colors;
+// console.log(border);
+
+// console.log(Object.keys(options).length);
 
 // let counter = 0;
 // for (let key in options) { //перебирає об'єкти
@@ -356,3 +369,261 @@ console.log(Object.keys(options).length);
 // console.log(counter);
 
 
+// const arr = [2, 13, 26, 8, 10];
+// arr.sort(compareNum);
+// console.log(arr);
+
+// function compareNum(a, b){
+//     return a - b;
+// }
+
+// // arr[99] = 0; //вказати позицію в масиві
+// console.log(arr.length); вказує останню позицію в масиві +1
+// // console.log(arr); 
+
+// arr.forEach(function(item, i, arr){ // item - перемінна, і - ключ масива, массив до якого звертаємося
+//     console.log(`${i}: ${item}   внутри массива ${arr}`);
+// });
+
+
+
+
+// arr.pop(); //удаляє останній елемент масиву
+// arr.push(10); //додає до кінця масиву
+
+// console.log(arr);
+
+// for (let i = 0; i < arr.length; i++){
+//     console.log(arr[i]);
+// }
+
+// for (let value of arr) {
+//     console.log(value);
+// }
+
+// const str = prompt('', '');
+// const products = str.split(", "); // робить масив з строки при розділенні ", "
+// products.sort(); 
+// console.log(products.join(';')); // робить строку і додає";"
+
+
+// let stroka = "aaa bbb ccc"
+// console.log(stroka.slice(-7, -4));
+
+// let data = '2025-12-31'
+// let date = data.split("-");
+// date.sort(ppp)
+// function ppp (a, b){
+//     return a - b;
+// }
+// let dataa = date.join('/');
+// console.log(dataa);
+
+
+// let a = 5, 
+//     b = a;
+
+// b = b + 5;
+
+// console.log(b);
+// console.log(a);
+
+// const obj = {
+//     a: 5,
+//     b: 1
+// };
+
+// const copy = obj; // при при присвоєнні об'єкту, передаються не дані а ссилка на об'єкт
+// copy.a = 10;
+
+// console.log(copy);
+// console.log(obj);
+
+// function copy (mainObj) {  // функція, яка робить копію об'єкта і вводить нові дані
+//     let objCopy = {};
+//     let key;
+//     for (key in mainObj){
+//         objCopy[key] = mainObj[key];
+//     }
+//     return objCopy;
+// } 
+
+// const numbers = {
+//     a: 2,
+//     b: 5,
+//     c: {
+//         x: 7,
+//         y: 4
+//     }
+// };
+
+// const newNumbers = copy(numbers);
+
+// newNumbers.a = 10;
+
+// console.log(newNumbers);
+// console.log(numbers);
+
+// const add = {
+//     d: 17,
+//     e: 20
+// };
+
+// const clone = Object.assign({}, add);
+
+// clone.d = 20;
+// console.log(add);
+// console.log(clone);
+
+// console.log(Object.assign({}, add)); // з'єднати два об'єкти. перший в дужках куда вставити, другий в дужках - шо вставити.
+
+
+// const oldArray = ['a', 'b', 'c'];
+// const newArray = oldArray.slice();
+
+// newArray[1] = 'sdsdsds'
+// console.log(newArray);
+// console.log(oldArray);
+
+// const video = ['youtube', 'vimeo', 'rutube'],
+//     blogs = ['wordpress', 'livejournal', 'blogger'],
+//     internet = [...video, ...blogs, 'vk', 'facebook'];
+// console.log(internet);
+
+// function log(a, b, c) {
+//     console.log(a);
+//     console.log(b);
+//     console.log(c);
+// }
+
+// const num = [2, 5, 7];
+
+// log(...num);
+
+// const array = ['a', 'b'];
+// const newAarray = [...array];
+
+// console.log(newAarray);
+
+// const q = {
+//     one: 1,
+//     two: 2
+// };
+
+// const newObj = {...q};
+// newObj.one = 3;
+// console.log(q);
+// console.log(newObj);
+
+// let str = "some";
+// let strObj = new String(str);
+
+// // console.log(typeof(str));
+// // console.log(typeof(strObj));
+
+// console.dir([1, 2, 3]);
+
+// const soldier = {
+//     health: 400,
+//     armor: 100,
+//     sayHello: function(){
+//         console.log('Hello');
+//     }
+// };
+
+// const john =  Object.create(soldier); 
+
+// Object.setPrototypeOf(john, soldier);
+// john.sayHello();
+
+
+
+
+let numberOfFilms;
+
+
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: true,
+    prr,
+    toggleVisibleMyDB,
+    start,
+    rememberMyFilms,
+    writeYourGenres,
+    showMyDB
+};
+
+function toggleVisibleMyDB () {
+    if (personalMovieDB.privat == false) {
+        personalMovieDB.privat = true;
+    } else  {
+        personalMovieDB.privat = false;
+    }
+    
+}
+
+function rememberMyFilms(){
+    for(let i = 0; i < 1; i++) {
+        const a = prompt('the one of the last watching film?', ''),
+            b = prompt('what mark can you give to film?');
+        if (a != null && b != null && a !='' && b != '' && a.length < 50){
+            personalMovieDB.movies[a] = b;
+            console.log('done');
+        }else{
+            console.log('error');
+            i--;
+        }
+    }
+}
+
+function showMyDB () {
+    if (personalMovieDB.privat == false){
+        console.log(personalMovieDB);
+    } 
+}
+
+
+function writeYourGenres () {
+    for(let i = 0; i < 3; i++) {
+        let a = prompt(`your favorite gener? № ${i + 1}` , "");
+        while (a == null || a == '') {
+            a = prompt (`your favorite gener? № ${i + 1}` , "");
+        }
+        personalMovieDB.genres[i] = a;
+    }
+    personalMovieDB.genres.forEach(function(item, i){
+        console.log(`любимий жанр ${i+1} це ${item}`);
+    });
+}
+
+function start() {
+
+    numberOfFilms = +prompt('how much films you watched already?', '');
+    personalMovieDB.count = numberOfFilms;
+
+    while(numberOfFilms == '' || numberOfFilms == null || isNaN(numberOfFilms)){
+        numberOfFilms = +prompt('how much films you watched already?', '');
+        personalMovieDB.count = numberOfFilms;
+    }
+}
+
+function prr(){
+        let question = prompt('do you want to show your info?', '');
+        if(question == '' || question == null || question == "no"){
+            question = true;
+        } else {
+            question = false;
+        }
+        personalMovieDB.privat = question;
+}
+
+
+personalMovieDB.prr();
+personalMovieDB.start();
+personalMovieDB.rememberMyFilms();
+personalMovieDB.writeYourGenres();
+personalMovieDB.toggleVisibleMyDB();
+personalMovieDB.showMyDB();
