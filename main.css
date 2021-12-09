@@ -1,0 +1,11 @@
+button {
+    height: 50px;
+    width: 200px;
+    background-color: rgb(5, 117, 15);
+    color: #fff;
+    border-radius: 50px;
+    margin: 30px 10px 30px 10px;
+}
+.sylka {
+    margin: 20px;
+}
