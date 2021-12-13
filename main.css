@@ -1,11 +1,20 @@
-button {
+button{
     height: 50px;
-    width: 200px;
-    background-color: rgb(5, 117, 15);
-    color: #fff;
-    border-radius: 50px;
-    margin: 30px 10px 30px 10px;
+    width: 150px;
+    background-color: green;
+    margin-bottom: 50px;
 }
-.sylka {
-    margin: 20px;
+
+.wrapper{
+    height: 400px;
+    width: 400px;
+    border: 1px solid black;
+    position: relative;
+}
+
+.box{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    position: absolute;
 }
